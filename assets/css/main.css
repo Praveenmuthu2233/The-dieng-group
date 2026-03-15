@@ -573,7 +573,9 @@ h6 {
   font-weight: 600;
   margin-bottom: 15px;
 }
-
+.footer-links{
+  width: 330px;
+}
 .footer .footer-links ul {
   list-style: none;
   padding: 0;
@@ -602,7 +604,10 @@ h6 {
   color: var(--accent-color);
   transform: translateX(5px);
 }
-
+.footer .footer-links {
+  display: flex;
+  gap: 40px;
+}
 .footer .footer-newsletter p {
   margin-bottom: 20px;
   line-height: 1.6;
@@ -673,6 +678,72 @@ h6 {
 .footer .footer-bottom .credits {
   padding-top: 5px;
 }
+.footer .footer-social-links h4 {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.footer .footer-social-links h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+/* Social icons */
+.footer .footer-social-links .social-links {
+  display: flex;
+  gap: 12px;
+}
+.footer .footer-links .empty-servies::after {
+  background-color: transparent;
+}
+.footer .footer-social-links .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #e9e9e9;
+  color: #000;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.footer .footer-social-links .social-links a:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+
+.footer .footer-social-links ul {
+  list-style: none;   /* remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-social-links ul li {
+  padding: 8px 0;
+}
+
+.footer .footer-social-links ul a {
+  color: #000;   /* black color */
+  text-decoration: none;
+}
+
+.footer .footer-social-links ul a:hover {
+  color: var(--accent-color);
+}
+
+.footer .footer-links ul h4:empty {
+  display: none;
+}
 
 .footer .legal-links {
   display: flex;
@@ -686,8 +757,10 @@ h6 {
     justify-content: center;
     margin-bottom: 15px;
   }
+  .footer .footer-links {
+    grid-template-columns: 1fr;
+  }
 }
-
 .footer .legal-links a {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   font-size: 13px;
@@ -903,6 +976,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   /* text-align: center; */
+  font-size: 22.438px;
   padding-bottom: 60px;
   position: relative;
 }
@@ -1026,7 +1100,7 @@ section,
 }
 
 .hero .hero-content .hero-text {
-  font-size: 1.125rem;
+  font-size: 22.438px;
   line-height: 1.7;
   color: var(--contrast-color);
   margin-bottom: 40px;
@@ -1405,7 +1479,7 @@ section,
 }
 
 .about .description {
-  font-size: 1.1rem;
+  font-size: 22.438px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   line-height: 1.7;
 }

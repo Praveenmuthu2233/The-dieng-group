@@ -58,7 +58,46 @@
 :root {
   scroll-behavior: smooth;
 }
+.nav-black{
+  padding: 20px;
+  word-wrap: break-word;
+}
+.nav-white{
+  display: flex !important;
+  width: 620px !important;
+  position: absolute !important;
+  margin-left: -350px !important;
+}
+.nav-black a{
+  display: block;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.5;
+  white-space: normal !important;
+  overflow-wrap: break-word;
+}
+/* RESPONSIVE MEGA MENU */
 
+@media (max-width: 991px){
+
+  .nav-white{
+    display: block !important;
+    width: 100% !important;
+    position: relative !important;
+    margin-left: 0 !important;
+    padding: 10px 0;
+  }
+
+  .nav-black{
+    padding: 10px 20px;
+  }
+
+  .nav-black h6{
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+}
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -893,6 +932,9 @@ section,
   margin-bottom: 0;
 }
 
+.section-title h4 {
+  font-size: 22.438px;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -1356,13 +1398,14 @@ section,
 }
 
 .about .lead-text {
-  font-size: 1.1rem;
+  font-size: 22.438px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 16px;
   font-weight: 500;
 }
 
 .about .description {
+  font-size: 1.1rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   line-height: 1.7;
 }
@@ -1543,6 +1586,7 @@ section,
 }
 
 .services .service-card {
+  
   position: relative;
   padding: 32px;
   border-radius: 16px;
@@ -1669,6 +1713,7 @@ section,
   color: var(--default-color);
   margin-bottom: 24px;
   flex-grow: 1;
+  /* font-size: 22.438px; */
 }
 
 .services .service-card .service-link {
@@ -1689,7 +1734,6 @@ section,
 .services .service-card .service-link:hover {
   color: color-mix(in srgb, var(--accent-color) 80%, black);
 }
-
 @media (max-width: 768px) {
   .services .service-card {
     padding: 24px;

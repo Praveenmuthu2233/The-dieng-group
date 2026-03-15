@@ -77,7 +77,12 @@
   overflow-wrap: break-word;
 }
 /* RESPONSIVE MEGA MENU */
-
+.mega-menu a {
+  white-space: nowrap;
+}
+.mega-menu ul li a {
+  white-space: nowrap;
+}
 @media (max-width: 991px){
 
   .nav-white{

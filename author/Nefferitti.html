@@ -29,14 +29,144 @@
   <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #DC8526;
+      --dark: #282C4B;
+      --light: #FCEFE1;
+      --text: #555;
+    }
 
-  <!-- Main CSS File -->
-  <link href="/assets/css/main.css" rel="stylesheet">
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      color: var(--text);
+    }
 
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 120px 0 80px;
+        position: relative;
+        overflow: hidden;
+        /* background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%); */
+        background: url(../img/hero-1.png) no-repeat;
+        background-size: cover;
+        }
+
+    .hero h1 {
+        color: #fff;
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      color: var(--dark);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section-title h2::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: var(--primary);
+      display: block;
+      margin-top: 10px;
+    }
+
+    /* ABOUT */
+    .about {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 20px;
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-content h2 {
+      font-size: 32px;
+      color: var(--dark);
+    }
+
+    .about-content p {
+      line-height: 1.7;
+    }
+
+    /* FEATURES GRID */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .feature-box {
+      background: var(--light);
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    /* LIST */
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    /* CARD STYLE */
+    .card {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    
+
+    @media(max-width:768px) {
+      .about {
+        flex-direction: column;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
-<body class="index-page">
-  <header id="header" class="header d-flex align-items-center sticky-top">
+<body>
+    <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
       <a href="/index.html" class="logo d-flex align-items-center me-auto me-xl-0">
 
@@ -45,7 +175,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="/index.html">Home</a></li>
-          <li><a href="/about.html">Company</a></li>
+          <li><a href="/about.html" class="active">Company</a></li>
           <li class="dropdown"><a href="#"><span>What we do</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul class="nav-white">
@@ -88,210 +218,223 @@
       </nav>
       <a class="btn-getstarted" href="index.html#about">Get Started</a>
     </div>
-  </header>
+    </header>
+  <!-- HERO -->
 
-  <main id="main">
+<!-- HERO -->
+    <section class="hero">
+    <div class="container">
+        <h1>Nefferitti</h1>
+        <p>Managing Principal | Global Governmental Agency Sector | The Dieng Group</p>
+    </div>
+    </section>
 
-  <!-- Legal Services Section -->
-  <section class="service-details">
+
+    <!-- OVERVIEW -->
+    <!-- PROFESSIONAL OVERVIEW WITH IMAGE -->
+    <section class="section">
     <div class="container">
 
-      <div class="row">
-        <div class="col-lg-8 margin-auto">
+        <div class="about">
 
-          <!-- Service Overview -->
-          <div class="service-overview">
+        <!-- LEFT IMAGE -->
+        <img src="/assets/img/person/Deing.jpg" alt="Nefferitti">
 
-            <div class="overview-label">
-              <span class="dot"></span>
-              Legal Advisory Services
+        <!-- RIGHT CONTENT -->
+        <div class="about-content">
+            <h2>Professional Overview</h2>
+
+            <p>
+            Nefferitti is a Principal and Managing Principal of the Global Governmental Agency sector at The Dieng Group (TDG). She brings extensive expertise in policy and governance, particularly in large-scale Foreign Direct Investment (FDI) initiatives across global markets.
+            </p>
+
+            <p>
+            She has contributed to major federal grant programs including the Neighborhood Stabilization Program (NSP), Housing & Urban Development (HUD), and Community Development Block Grant (CDBG), ensuring compliance and strengthening governance systems.
+            </p>
+
+            <p>
+            As a firm-wide assurance resource, she leads best practice implementation, supports methodological improvements, and collaborates across diverse political environments to uphold professional standards.
+            </p>
+
+            <!-- OPTIONAL FEATURES -->
+            <div class="features">
+            <div class="feature-box">FDI Strategy</div>
+            <div class="feature-box">Policy & Governance</div>
+            <div class="feature-box">Compliance Leadership</div>
+            <div class="feature-box">Risk Management</div>
             </div>
-
-            <h2>Legal</h2>
-
-            <p>
-              The Dieng Group has developed strong partnerships with reputable law firms
-              to provide comprehensive legal services for clients entering new markets
-              or conducting business across West Africa. Our integrated approach ensures
-              that businesses receive reliable legal guidance while maintaining operational
-              efficiency and regulatory compliance.
-            </p>
-
-            <p>
-              By collaborating with experienced legal professionals, we support clients
-              throughout the entire lifecycle of their business activities—from initial
-              market entry to complex corporate transactions. Our legal advisory network
-              enables organizations to navigate regulatory environments, protect their
-              interests, and confidently pursue growth opportunities.
-            </p>
-
-            <p>
-              In many cases, our legal partners help organizations reduce operational
-              risks, prevent costly legal errors, and ensure long-term compliance with
-              national and international regulations. This proactive legal support gives
-              our clients a strong competitive advantage in their respective industries.
-            </p>
-
-          </div>
-
-
-
-          <!-- Legal Services -->
-          <div class="key-features">
-
-            <h3>Our Legal Services</h3>
-
-            <div class="row gy-4">
-
-              <!-- Legal Advice -->
-              <div class="col-md-6">
-                <div class="feature-card">
-                  <div class="feature-icon">
-                    <i class="bi bi-chat-dots"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h4>Legal Advice & Consultation</h4>
-                    <p>
-                      Professional legal guidance on corporate governance,
-                      regulatory requirements, compliance matters, and
-                      strategic business decisions to ensure organizations
-                      operate within legal frameworks.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- Document Preparation -->
-              <div class="col-md-6">
-                <div class="feature-card">
-                  <div class="feature-icon">
-                    <i class="bi bi-file-earmark-text"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h4>Document & Contract Preparation</h4>
-                    <p>
-                      Drafting, reviewing, and managing legal documents and
-                      commercial contracts to ensure clarity, enforceability,
-                      and alignment with applicable legal standards.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- Mediation -->
-              <div class="col-md-6">
-                <div class="feature-card">
-                  <div class="feature-icon">
-                    <i class="bi bi-people"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h4>Resolution & Mediation</h4>
-                    <p>
-                      Alternative dispute resolution services that help
-                      organizations resolve conflicts efficiently through
-                      negotiation, mediation, and collaborative settlements.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- M&A -->
-              <div class="col-md-6">
-                <div class="feature-card">
-                  <div class="feature-icon">
-                    <i class="bi bi-diagram-3"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h4>Merger & Acquisitions (M&A)</h4>
-                    <p>
-                      Comprehensive legal support for mergers, acquisitions,
-                      joint ventures, and corporate restructuring activities,
-                      ensuring compliance and smooth transaction execution.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- Litigation -->
-              <div class="col-md-6">
-                <div class="feature-card">
-                  <div class="feature-icon">
-                    <i class="bi bi-shield-check"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h4>Litigation & Trial Representation</h4>
-                    <p>
-                      Representation in legal proceedings and litigation
-                      matters to protect client interests and achieve
-                      favorable outcomes through strategic advocacy.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- Legal Research -->
-              <div class="col-md-6">
-                <div class="feature-card">
-                  <div class="feature-icon">
-                    <i class="bi bi-search"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h4>Legal Research</h4>
-                    <p>
-                      In-depth legal research and regulatory analysis
-                      that supports decision-making and ensures businesses
-                      remain aligned with evolving legal frameworks.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <!-- Our Legal Approach -->
-          <div class="service-overview">
-
-            <h3>Our Legal Approach</h3>
-
-            <p>
-              At The Dieng Group, we believe legal strategy should align with
-              business objectives. Our approach combines legal expertise,
-              industry knowledge, and practical solutions that empower
-              organizations to operate with confidence in complex regulatory
-              environments.
-            </p>
-
-            <p>
-              By partnering with leading law firms and legal experts, we ensure
-              that our clients receive comprehensive support that addresses both
-              immediate legal needs and long-term strategic goals.
-            </p>
-
-            <p>
-              Whether assisting with contract negotiations, regulatory compliance,
-              dispute resolution, or corporate transactions, our legal advisory
-              services provide the foundation for secure and sustainable growth.
-            </p>
-
-          </div>
 
         </div>
-      </div>
+
+        </div>
 
     </div>
-  </section>
+    </section>
 
-</main>
-  <footer id="footer" class="footer light-background">
+
+    <!-- GLOBAL EXPERIENCE -->
+    <section class="section">
+    <div class="container">
+
+        <div class="section-title">
+        <h2>Global Experience & Research</h2>
+        </div>
+
+        <div class="card">
+        <p>
+            Nefferitti is currently pursuing a Ph.D. in Global Leadership & Change at Pepperdine University, focusing on how policymakers leverage public-private partnerships (PPPs) to stimulate economic growth in urban communities.
+        </p>
+
+        <p>
+            She has conducted global study tours across:
+        </p>
+
+        <ul>
+            <li>West Africa – Senegal, The Gambia</li>
+            <li>India – Bangalore</li>
+            <li>South America – Colombia, Honduras</li>
+            <li>Caribbean – Cuba, Haiti, Puerto Rico</li>
+            <li>Europe – Germany, Spain</li>
+        </ul>
+
+        <p>
+            Her expertise in cultural humility and inclusive leadership positions her as a change-maker in global policy, governance, and FDI development.
+        </p>
+        </div>
+
+    </div>
+    </section>
+
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section class="section">
+    <div class="container">
+
+        <div class="section-title">
+        <h2>Professional Experience</h2>
+        </div>
+
+        <div class="card">
+        <p>
+            Nefferitti has worked with leading global institutions, including assisting a senior partner at one of India's largest law firms, J. Sagar & Associates. Her work included mergers and acquisitions (M&A), due diligence, and contract drafting.
+        </p>
+
+        <p>
+            She has authored research and policy papers, including:
+        </p>
+
+        <ul>
+            <li>Comparative analysis of India's UID system and U.S. Social Security</li>
+            <li>"Employment Discrimination and Human Rights"</li>
+        </ul>
+
+        <p>
+            She has also contributed to international legal and policy conferences in Boston, San Francisco, India, and Germany.
+        </p>
+        </div>
+
+    </div>
+    </section>
+
+
+    <!-- SIGNATURE STRENGTHS -->
+    <section class="section">
+    <div class="container">
+
+        <div class="section-title">
+        <h2>Signature Strengths</h2>
+        </div>
+
+        <div class="card">
+        <ul>
+            <li>Foreign Direct Investment (FDI) Strategy & Development</li>
+            <li>Policy & Governance Implementation and Compliance</li>
+            <li>Program Compliance & Third-Party Oversight</li>
+            <li>Due Diligence & Risk Management</li>
+            <li>Contract Negotiation</li>
+            <li>Continuous Improvement Methodologies</li>
+            <li>Change Management Frameworks</li>
+            <li>Cultural Humility & Inclusive Leadership</li>
+        </ul>
+        </div>
+
+    </div>
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section class="section">
+    <div class="container">
+
+        <div class="section-title">
+        <h2>Educational Background</h2>
+        </div>
+
+        <div class="card">
+        <ul>
+            <li>Ph.D. – Leadership & Change, Pepperdine University (ABD)</li>
+            <li>MS – Economics, Purdue University (Cum laude)</li>
+            <li>MBA – Finance/Energy & Sustainability (Magna cum laude)</li>
+            <li>BS – Mass Communications, Minor in Business Administration</li>
+        </ul>
+        </div>
+
+    </div>
+    </section>
+
+
+    <!-- CONFERENCES -->
+    <section class="section">
+    <div class="container">
+
+        <div class="section-title">
+        <h2>Lectures, Conferences & Fellowships</h2>
+        </div>
+
+        <div class="card">
+        <ul>
+            <li>Guest Lecturer – University of The Gambia</li>
+            <li>Guest Trainer – Peace Network, The Gambia</li>
+            <li>Peer Reviewer – Johns Hopkins University Press Journal</li>
+            <li>Hawaii International Conference on Education</li>
+            <li>Panel Speaker – Leadership in Healthcare</li>
+            <li>Eugene P. Ruehlmann Fellowship (Public Policy)</li>
+            <li>Guest Lecturer – Purdue University</li>
+            <li>International Conferences – USA, India, Germany</li>
+        </ul>
+        </div>
+
+    </div>
+    </section>
+
+
+    <!-- COMMUNITY -->
+    <section class="section">
+    <div class="container">
+
+        <div class="section-title">
+        <h2>Community Engagement</h2>
+        </div>
+
+        <div class="card">
+        <p>
+            Nefferitti has developed corporate collaboration programs connecting nonprofits, private organizations, and educational institutions. Her work focuses on reducing barriers, promoting inclusion, and enabling upward mobility for underserved communities.
+        </p>
+
+        <p>
+            She is deeply committed to social impact and community development, fostering initiatives that support education, economic empowerment, and equity.
+        </p>
+
+        <p>
+            Outside of her professional work, she enjoys international travel, documentaries, and staying informed about global developments.
+        </p>
+        </div>
+
+    </div>
+    </section>
+
+  <!-- FOOTER -->
+   <footer id="footer" class="footer light-background">
 
     <div class="container footer-top">
       <div class="row gy-4">
@@ -405,6 +548,8 @@
   <!-- Main JS File -->
   <script src="/assets/js/main.js"></script>
 
+
 </body>
 
 </html>
+

@@ -579,7 +579,7 @@ h6 {
   margin-bottom: 15px;
 }
 .footer-links{
-  width: 330px;
+  width: 300px;
 }
 .footer .footer-links ul {
   list-style: none;
@@ -682,6 +682,9 @@ h6 {
 
 .footer .footer-bottom .credits {
   padding-top: 5px;
+}
+.footer-social-links{
+  padding-left: 40px;
 }
 .footer .footer-social-links h4 {
   position: relative;

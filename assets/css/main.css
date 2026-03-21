@@ -59,6 +59,7 @@
   scroll-behavior: smooth;
 }
 .nav-black{
+  width: 250px;
   padding: 20px;
   word-wrap: break-word;
 }
@@ -242,7 +243,9 @@ h6 {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
-
+.nav-black h6{
+  font-weight: bold;
+}
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
@@ -759,6 +762,16 @@ h6 {
   gap: 20px;
   /* justify-content: flex-end; */
 }
+.footer .footer-top {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping */
+  gap: 40px;
+}
+.footer .footer-info,
+.footer .footer-links,
+.footer .footer-social-links {
+  flex: 1 1 250px; /* flexible columns */
+}
 
 @media (max-width: 767.98px) {
   .footer .legal-links {
@@ -798,7 +811,23 @@ h6 {
     text-align: center;
   }
 }
+@media (max-width: 768px) {
+  .footer .footer-top {
+    flex-direction: column; /* stack everything */
+  }
 
+  .footer .footer-links {
+    flex-direction: column; /* services become single column */
+  }
+
+  .footer .footer-links ul {
+    width: 100%;
+  }
+
+  .footer .footer-social-links {
+    text-align: left;
+  }
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/

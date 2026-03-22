@@ -70,11 +70,6 @@
       color: #fff;
     }
 
-    /* SECTION */
-    .section {
-      padding: 60px 0;
-    }
-
     .section-title h2 {
       font-size: 32px;
       color: var(--dark);
@@ -150,15 +145,35 @@
       margin-bottom: 20px;
     }
     .section {
-      margin-top: -40px;
-      padding: 20px 0 20px; /* top | left-right | bottom */
+      padding: 20px 0; /* reduce vertical spacing */
+      margin: 0 !important;  /* remove negative/extra margin */
     }
+
+    /* Remove last element spacing inside sections */
     .section *:last-child {
-      margin-bottom: 20px !important;
+      margin-bottom: 0 !important;
     }
-    .footer-top {
-      padding-top: 25px !important;
-      padding-bottom: 10px !important;
+
+    /* Remove default heading space */
+    .section-title h2 {
+      margin-bottom: 10px;
+    }
+
+    /* Remove card extra space */
+    .card {
+      margin-bottom: 0;
+      padding: 20px;
+    }
+
+    /* Remove unwanted gaps from Bootstrap rows */
+    .row {
+      margin-bottom: 0 !important;
+    }
+
+    /* Remove container spacing */
+    .container {
+      padding-top: 0;
+      padding-bottom: 0;
     }
     @media(max-width:768px) {
       .about {
